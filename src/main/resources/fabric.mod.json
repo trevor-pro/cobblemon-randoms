@@ -6,19 +6,16 @@
   "description": "",
   "authors": [],
   "contact": {},
-  "license": "MIT",
+  "license": "",
   "icon": "assets/cobblemonuncraftables/icon.png",
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "pro.trevor.cobblemonuncraftables.datagenerator.CobblemonUncraftablesDataGenerator"
-    ],
     "main": [
-      "pro.trevor.cobblemonuncraftables.CobblemonUncraftables"
+      "pro.trevor.cobblemonrandoms.CobblemonRandoms"
     ]
   },
   "mixins": [
-    "cobblemonuncraftables.mixins.json"
+    "cobblemonrandoms.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

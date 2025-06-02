@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.util;
+package pro.trevor.cobblemonrandoms.util;
 
 import com.google.gson.JsonParser;
 import net.minecraft.nbt.NbtCompound;

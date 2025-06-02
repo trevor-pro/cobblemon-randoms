@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.gts;
+package pro.trevor.cobblemonrandoms.gts;
 
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.pokemon.Pokemon;
@@ -14,7 +14,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
-import pro.trevor.cobblemonuncraftables.util.Log;
+import pro.trevor.cobblemonrandoms.util.Log;
 
 import java.util.UUID;
 

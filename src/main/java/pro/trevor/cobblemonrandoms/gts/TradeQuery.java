@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.gts;
+package pro.trevor.cobblemonrandoms.gts;
 
 import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
 import com.cobblemon.mod.common.pokemon.Pokemon;

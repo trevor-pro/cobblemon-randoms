@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.util;
+package pro.trevor.cobblemonrandoms.util;
 
 public class Nbt {
 

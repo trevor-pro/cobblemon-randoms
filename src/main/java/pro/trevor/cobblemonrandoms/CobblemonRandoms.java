@@ -1,9 +1,9 @@
-package pro.trevor.cobblemonuncraftables;
+package pro.trevor.cobblemonrandoms;
 
 import net.fabricmc.api.ModInitializer;
-import pro.trevor.cobblemonuncraftables.gts.GtsManager;
+import pro.trevor.cobblemonrandoms.gts.GtsManager;
 
-public class CobblemonUncraftables implements ModInitializer {
+public class CobblemonRandoms implements ModInitializer {
 
     public static GtsManager GTS_MANAGER;
 

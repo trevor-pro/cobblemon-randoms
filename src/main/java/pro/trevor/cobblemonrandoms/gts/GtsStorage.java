@@ -1,10 +1,10 @@
-package pro.trevor.cobblemonuncraftables.gts;
+package pro.trevor.cobblemonrandoms.gts;
 
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.world.ServerWorld;
-import pro.trevor.cobblemonuncraftables.util.JsonCodec;
-import pro.trevor.cobblemonuncraftables.util.ObjectStorage;
+import pro.trevor.cobblemonrandoms.util.JsonCodec;
+import pro.trevor.cobblemonrandoms.util.ObjectStorage;
 
 public class GtsStorage extends ObjectStorage<Gts> {
 

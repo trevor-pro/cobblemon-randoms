@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "pro.trevor.cobblemonuncraftables.mixin",
+  "package": "pro.trevor.cobblemonrandoms.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ServerWorldMixin"

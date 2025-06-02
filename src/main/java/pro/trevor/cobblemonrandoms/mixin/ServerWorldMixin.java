@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.mixin;
+package pro.trevor.cobblemonrandoms.mixin;
 
 import net.minecraft.server.world.ServerWorld;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,4 +1,4 @@
-package pro.trevor.cobblemonuncraftables.gts;
+package pro.trevor.cobblemonrandoms.gts;
 
 import com.cobblemon.mod.common.Cobblemon;
 import com.cobblemon.mod.common.api.storage.party.PartyPosition;
@@ -12,8 +12,8 @@ import com.google.gson.JsonObject;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
-import pro.trevor.cobblemonuncraftables.util.JsonCodec;
-import pro.trevor.cobblemonuncraftables.util.Log;
+import pro.trevor.cobblemonrandoms.util.JsonCodec;
+import pro.trevor.cobblemonrandoms.util.Log;
 
 import java.util.*;
 import java.util.function.Predicate;

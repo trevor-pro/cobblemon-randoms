@@ -54,6 +54,10 @@ public class Gts {
         completedTrades.remove(uuid);
     }
 
+    public TradeQuery getQuery(UUID uuid) {
+        return queries.get(uuid);
+    }
+
     public List<TradeQuery> allQueries() {
         return new ArrayList<>(queries.values());
     }
@@ -81,7 +85,7 @@ public class Gts {
 
 
     // Emplace a query without needing access to a ServerPlayerEntity or removing a pokemon
-    public boolean putForcedQuery(UUID initiator, TradeQuery query) {
+    public boolean forcePutQuery(UUID initiator, TradeQuery query) {
         if (queries.containsKey(initiator)) {
             return false;
         }
@@ -104,6 +108,18 @@ public class Gts {
 
         return false;
     }
+
+    public boolean forceRemoveQuery(UUID initiator) {
+        if (!queries.containsKey(initiator)) {
+            return true;
+        }
+
+        queries.remove(initiator);
+
+        return true;
+    }
+
+
 
     public boolean doTrade(ServerPlayerEntity responder, UUID initiatorUuid, Pokemon pokemonToTrade) {
         TradeQuery query = queries.get(initiatorUuid);

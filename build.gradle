@@ -37,7 +37,6 @@ repositories {
 }
 
 dependencies {
-    // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings(loom.layered {
         mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
@@ -48,6 +47,8 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "net.fabricmc:fabric-language-kotlin:1.11.0+kotlin.2.0.0"
+
+    modImplementation "ca.landonjw.gooeylibs:fabric:3.1.1-1.21.x"
 
     implementation "org.jetbrains.kotlin:kotlin-reflect:2.0.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0"

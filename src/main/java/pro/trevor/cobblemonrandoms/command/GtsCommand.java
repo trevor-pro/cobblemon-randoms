@@ -17,6 +17,7 @@ import pro.trevor.cobblemonrandoms.CobblemonRandoms;
 import pro.trevor.cobblemonrandoms.command.permission.Permissions;
 import pro.trevor.cobblemonrandoms.gts.Gts;
 import pro.trevor.cobblemonrandoms.gts.TradeQuery;
+import pro.trevor.cobblemonrandoms.gui.GtsGui;
 import pro.trevor.cobblemonrandoms.util.Log;
 
 import java.util.UUID;
@@ -33,6 +34,9 @@ public class GtsCommand implements CommandRegistrationCallback {
                 .then(CommandManager.literal("cancel")
                         .requires(Permissions.GTS_CANCEL.hasPermission())
                         .executes(GtsCommand::executeGtsCancelCommand))
+                .then(CommandManager.literal("search")
+                        .requires(Permissions.GTS_SEARCH.hasPermission())
+                        .executes(GtsCommand::executeGtsSearchBasicCommand))
                 .then(CommandManager.literal("trade")
                         .requires(Permissions.GTS_QUERY.hasPermission())
                         .then(CommandManager.argument("party_slot", PartySlotArgumentType.Companion.partySlot())
@@ -109,7 +113,7 @@ public class GtsCommand implements CommandRegistrationCallback {
 
         Pokemon tradePokemon = PartySlotArgumentType.Companion.getPokemonOf(context, "party_slot", player);
         Species desiredSpecies = SpeciesArgumentType.Companion.getPokemon(context, "desired_species");
-        TradeQuery tradeQuery = new TradeQuery(tradePokemon, desiredSpecies);
+        TradeQuery tradeQuery = new TradeQuery(player.getUuid(), tradePokemon, desiredSpecies);
         gts.putQuery(player, tradeQuery);
 
         context.getSource().sendFeedback(() -> Text.literal(String.format("Created a trade looking for '%s'; sending '%s' to the GTS", tradeQuery.getDesiredSpecies().getName(), tradeQuery.getTradePokemon().getSpecies().getName())), false);
@@ -170,7 +174,7 @@ public class GtsCommand implements CommandRegistrationCallback {
         Species requestSpecies = PokemonSpecies.INSTANCE.random();
 
         Pokemon tradePokemon = tradeSpecies.create(10);
-        TradeQuery query = new TradeQuery(tradePokemon, requestSpecies);
+        TradeQuery query = new TradeQuery(player.getUuid(), tradePokemon, requestSpecies);
 
         gts.forcePutQuery(uuid, query);
 
@@ -180,6 +184,12 @@ public class GtsCommand implements CommandRegistrationCallback {
 
         context.getSource().sendFeedback(() -> Text.literal(String.format("Set query trade of a '%s' for a '%s'", tradeSpecies.getName(), requestSpecies.getName())), false);
 
+        return 1;
+    }
+
+
+    public static int executeGtsSearchBasicCommand(CommandContext<ServerCommandSource> context) {
+        GtsGui.openGtsBasePage(context.getSource().getPlayer(), false);
         return 1;
     }
 }

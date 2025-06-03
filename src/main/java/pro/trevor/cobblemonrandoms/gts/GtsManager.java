@@ -1,19 +1,12 @@
 package pro.trevor.cobblemonrandoms.gts;
 
-import com.cobblemon.mod.common.api.pokemon.PokemonSpecies;
-import com.cobblemon.mod.common.pokemon.Pokemon;
-import com.cobblemon.mod.common.pokemon.Species;
-import com.google.gson.JsonObject;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
-import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import pro.trevor.cobblemonrandoms.util.Log;
-
-import java.util.UUID;
 
 public class GtsManager {
 
